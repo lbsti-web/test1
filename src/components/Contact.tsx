@@ -66,8 +66,8 @@ const Contact = () => {
             <span className="block text-amber-400">Journey Today</span>
           </h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-            Ready to transform your career? Connect with our admissions team and 
-            discover how LBSTI can help you achieve your professional goals.
+            Ready to learn new skills and transform your career? Connect with our admissions team
+            to find the perfect course that matches your goals and schedule.
           </p>
         </div>
 
@@ -111,19 +111,19 @@ const Contact = () => {
               <div className="grid grid-cols-2 gap-4">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-amber-400 mb-1">95%</div>
-                  <div className="text-sm text-slate-300">Placement Rate</div>
+                  <div className="text-sm text-slate-300">Success Rate</div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-amber-400 mb-1">25+</div>
-                  <div className="text-sm text-slate-300">Years Experience</div>
+                  <div className="text-sm text-slate-300">Years Training</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-amber-400 mb-1">5000+</div>
-                  <div className="text-sm text-slate-300">Alumni Network</div>
+                  <div className="text-2xl font-bold text-amber-400 mb-1">10,000+</div>
+                  <div className="text-sm text-slate-300">Students Trained</div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-amber-400 mb-1">50+</div>
-                  <div className="text-sm text-slate-300">Industry Partners</div>
+                  <div className="text-sm text-slate-300">Course Programs</div>
                 </div>
               </div>
             </div>
@@ -202,13 +202,13 @@ const Contact = () => {
                     onChange={handleChange}
                     className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all duration-200"
                   >
-                    <option value="">Select a program</option>
-                    <option value="software-engineering">Software Engineering</option>
-                    <option value="data-science">Data Science & AI</option>
-                    <option value="embedded-systems">Embedded Systems</option>
-                    <option value="cloud-architecture">Cloud Architecture</option>
-                    <option value="cybersecurity">Cybersecurity</option>
-                    <option value="digital-innovation">Digital Innovation</option>
+                    <option value="">Select a course category</option>
+                    <option value="it-software">IT & Software Development</option>
+                    <option value="creative-design">Creative & Design</option>
+                    <option value="finance-business">Finance & Business</option>
+                    <option value="digital-marketing">Digital Marketing</option>
+                    <option value="teacher-training">Teacher Training</option>
+                    <option value="women-empowerment">Women Empowerment</option>
                   </select>
                 </div>
               </div>

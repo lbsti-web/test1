@@ -3,10 +3,10 @@ import { Target, Eye, Award, Users, BookOpen, Lightbulb } from 'lucide-react';
 
 const About = () => {
   const achievements = [
-    { year: '1998', title: 'Institute Founded', desc: 'Established with vision for technical excellence' },
-    { year: '2005', title: 'Industry Recognition', desc: 'Accredited by National Technical Board' },
-    { year: '2012', title: 'Research Center', desc: 'Advanced R&D facility inaugurated' },
-    { year: '2020', title: 'Digital Transformation', desc: 'Hybrid learning ecosystem launched' },
+    { year: '1998', title: 'Institute Founded', desc: 'Started vocational training journey with computer courses' },
+    { year: '2005', title: 'Expansion', desc: 'Added creative and business training programs' },
+    { year: '2012', title: 'Diversification', desc: 'Launched teacher training and women empowerment courses' },
+    { year: '2020', title: 'Digital Learning', desc: 'Introduced online and hybrid training options' },
   ];
 
   return (
@@ -19,12 +19,12 @@ const About = () => {
             <span className="text-amber-800 text-sm font-semibold uppercase tracking-wide">About LBSTI</span>
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
-            Legacy of Technical
-            <span className="block text-amber-600">Excellence</span>
+            Legacy of Skill
+            <span className="block text-amber-600">Development</span>
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            For over two decades, LBSTI has been the cornerstone of technical education, 
-            shaping industry leaders and fostering innovation through rigorous academic programs.
+            For over two decades, LBSTI has been transforming lives through quality vocational
+            training, helping thousands achieve their career dreams with practical, job-ready skills.
           </p>
         </div>
 
@@ -35,29 +35,29 @@ const About = () => {
             <div>
               <h3 className="text-2xl font-bold text-slate-900 mb-6">Our Foundation</h3>
               <p className="text-slate-600 leading-relaxed mb-6">
-                Established in 1998, LBSTI emerged from a vision to bridge the critical gap between 
-                academic theory and industry practice. Our founders, distinguished engineers and 
-                educators, recognized the need for a technical institute that would produce 
-                job-ready professionals equipped with both theoretical knowledge and practical expertise.
+                Established in 1998, LBSTI emerged from a vision to make quality vocational education
+                accessible to everyone. We recognized the need for practical, job-oriented training
+                that empowers individuals with skills that directly translate to employment opportunities
+                and entrepreneurship.
               </p>
               <p className="text-slate-600 leading-relaxed">
-                Today, we stand as a testament to educational excellence, with our graduates 
-                leading major corporations, founding successful startups, and contributing to 
-                technological advancement across diverse industries.
+                Today, we proudly serve as a launchpad for career success, with our students working
+                in leading companies, running their own businesses, and achieving financial independence
+                through the skills they learned at LBSTI.
               </p>
             </div>
 
             {/* Key Metrics */}
             <div className="grid grid-cols-2 gap-6">
               <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
-                <div className="text-3xl font-bold text-slate-900 mb-2">5,000+</div>
-                <div className="text-slate-600 font-medium">Alumni Network</div>
-                <div className="text-sm text-slate-500 mt-1">Across 50+ countries</div>
+                <div className="text-3xl font-bold text-slate-900 mb-2">10,000+</div>
+                <div className="text-slate-600 font-medium">Students Trained</div>
+                <div className="text-sm text-slate-500 mt-1">Across multiple domains</div>
               </div>
               <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
-                <div className="text-3xl font-bold text-slate-900 mb-2">95%</div>
-                <div className="text-slate-600 font-medium">Placement Rate</div>
-                <div className="text-sm text-slate-500 mt-1">Within 6 months</div>
+                <div className="text-3xl font-bold text-slate-900 mb-2">50+</div>
+                <div className="text-slate-600 font-medium">Course Offerings</div>
+                <div className="text-sm text-slate-500 mt-1">Industry-focused programs</div>
               </div>
             </div>
           </div>
@@ -90,8 +90,8 @@ const About = () => {
             </div>
             <h4 className="text-xl font-bold text-slate-900 mb-4">Mission</h4>
             <p className="text-slate-600 leading-relaxed">
-              To deliver world-class technical education that empowers students with cutting-edge 
-              skills, ethical values, and innovative thinking capabilities.
+              To provide accessible, affordable, and quality vocational training that empowers
+              individuals with job-ready skills and opens doors to better career opportunities.
             </p>
           </div>
 
@@ -101,8 +101,8 @@ const About = () => {
             </div>
             <h4 className="text-xl font-bold text-slate-900 mb-4">Vision</h4>
             <p className="text-slate-600 leading-relaxed">
-              To be the premier technical institute recognized globally for excellence in 
-              education, research, and industry collaboration.
+              To be the most trusted vocational training institute, recognized for transforming
+              lives through practical skill development and creating self-reliant professionals.
             </p>
           </div>
 
@@ -110,10 +110,10 @@ const About = () => {
             <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mb-6">
               <Lightbulb className="h-8 w-8 text-white" />
             </div>
-            <h4 className="text-xl font-bold text-slate-900 mb-4">Innovation</h4>
+            <h4 className="text-xl font-bold text-slate-900 mb-4">Values</h4>
             <p className="text-slate-600 leading-relaxed">
-              Fostering a culture of innovation, research, and continuous learning to 
-              address tomorrow's technological challenges.
+              Quality training, individual attention, practical learning, and student success
+              are at the heart of everything we do at LBSTI.
             </p>
           </div>
         </div>

@@ -4,29 +4,29 @@ import { GraduationCap, Facebook, Twitter, Instagram, Linkedin, Mail, Phone, Map
 const Footer = () => {
   const quickLinks = [
     { label: 'About LBSTI', href: '#about' },
-    { label: 'Academic Programs', href: '#programs' },
-    { label: 'Faculty', href: '#faculty' },
-    { label: 'Research', href: '#research' },
+    { label: 'Course Categories', href: '#programs' },
     { label: 'Admissions', href: '#contact' },
-    { label: 'Alumni Network', href: '#' }
+    { label: 'Student Portal', href: '#' },
+    { label: 'Certifications', href: '#' },
+    { label: 'Success Stories', href: '#' }
   ];
 
   const programs = [
-    { label: 'Software Engineering', href: '#' },
-    { label: 'Data Science & AI', href: '#' },
-    { label: 'Embedded Systems', href: '#' },
-    { label: 'Cloud Architecture', href: '#' },
-    { label: 'Cybersecurity', href: '#' },
-    { label: 'Digital Innovation', href: '#' }
+    { label: 'IT & Software Courses', href: '#' },
+    { label: 'Graphic Design', href: '#' },
+    { label: 'Tally & Accounting', href: '#' },
+    { label: 'Digital Marketing', href: '#' },
+    { label: 'Teacher Training', href: '#' },
+    { label: 'Beauty & Fashion', href: '#' }
   ];
 
   const resources = [
-    { label: 'Student Portal', href: '#' },
-    { label: 'Library', href: '#' },
-    { label: 'Career Services', href: '#' },
-    { label: 'Research Publications', href: '#' },
-    { label: 'Industry Partners', href: '#' },
-    { label: 'Campus Facilities', href: '#' }
+    { label: 'Online Classes', href: '#' },
+    { label: 'Study Materials', href: '#' },
+    { label: 'Placement Cell', href: '#' },
+    { label: 'Fee Structure', href: '#' },
+    { label: 'Batch Schedule', href: '#' },
+    { label: 'Training Center', href: '#' }
   ];
 
   return (
@@ -44,13 +44,13 @@ const Footer = () => {
               </div>
               <div>
                 <span className="text-2xl font-bold text-white tracking-tight">LBSTI</span>
-                <div className="text-xs text-slate-400 font-medium">TECHNICAL INSTITUTE</div>
+                <div className="text-xs text-slate-400 font-medium">VOCATIONAL TRAINING</div>
               </div>
             </div>
             
             <p className="text-slate-400 mb-6 leading-relaxed">
-              Leading technical institute providing world-class education and research 
-              opportunities for the next generation of technology professionals.
+              Leading vocational training institute providing quality skill development programs
+              that empower individuals to build successful careers and achieve financial independence.
             </p>
             
             <div className="space-y-3">
@@ -147,7 +147,7 @@ const Footer = () => {
         <div className="border-t border-slate-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-slate-400 text-sm">
-              &copy; 2024 LBSTI Technical Institute. All rights reserved.
+              &copy; 2024 LBSTI Vocational Training Institute. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm">
               <a href="#" className="text-slate-400 hover:text-amber-400 transition-colors duration-200">Privacy Policy</a>
@@ -159,8 +159,8 @@ const Footer = () => {
           <div className="mt-6 pt-6 border-t border-slate-800">
             <div className="text-center">
               <p className="text-slate-500 text-xs">
-                Accredited by National Technical Education Board | ISO 9001:2015 Certified | 
-                Member of Association of Indian Technical Institutes
+                Recognized Vocational Training Center | ISO 9001:2015 Certified |
+                Authorized Computer Education & Training Partner
               </p>
             </div>
           </div>

@@ -5,10 +5,10 @@ const Hero = () => {
   const [currentStat, setCurrentStat] = useState(0);
   
   const stats = [
-    { number: '25+', label: 'Years Excellence', icon: Award },
-    { number: '5000+', label: 'Alumni Network', icon: Users },
-    { number: '50+', label: 'Industry Partners', icon: BookOpen },
-    { number: '95%', label: 'Placement Rate', icon: TrendingUp },
+    { number: '25+', label: 'Years Training', icon: Award },
+    { number: '10,000+', label: 'Students Trained', icon: Users },
+    { number: '50+', label: 'Course Programs', icon: BookOpen },
+    { number: '95%', label: 'Success Rate', icon: TrendingUp },
   ];
 
   useEffect(() => {
@@ -44,9 +44,9 @@ const Hero = () => {
             </div>
 
             <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight">
-              <span className="block">Engineering</span>
+              <span className="block">Skills That</span>
               <span className="block bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">
-                Excellence
+                Transform Lives
               </span>
               <span className="block text-4xl lg:text-5xl text-slate-300 font-normal mt-2">
                 Since 1998
@@ -54,22 +54,22 @@ const Hero = () => {
             </h1>
 
             <p className="text-xl text-slate-400 leading-relaxed max-w-2xl">
-              Pioneering technical education with industry-aligned curriculum, 
-              state-of-the-art facilities, and a legacy of producing skilled professionals 
-              who lead innovation across industries.
+              Empowering individuals with practical vocational skills through industry-focused
+              training programs. From IT to creative arts, business to beauty culture - we help
+              you build a successful career.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <button className="group bg-gradient-to-r from-amber-500 to-orange-500 text-white px-8 py-4 rounded-lg font-semibold flex items-center justify-center space-x-2 hover:shadow-2xl hover:shadow-amber-500/25 transition-all duration-300 transform hover:scale-105">
-                <span>Explore Programs</span>
+                <span>Browse Courses</span>
                 <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
               </button>
-              
+
               <button className="group flex items-center space-x-3 text-white hover:text-amber-400 transition-colors duration-300">
                 <div className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-amber-500/20 transition-colors duration-300">
                   <Play className="h-5 w-5 ml-1" />
                 </div>
-                <span className="font-medium">Watch Campus Tour</span>
+                <span className="font-medium">Watch Training Videos</span>
               </button>
             </div>
           </div>

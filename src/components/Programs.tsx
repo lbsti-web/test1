@@ -1,87 +1,107 @@
 import React, { useState } from 'react';
-import { Code, Database, Cpu, Globe, Shield, Zap, Clock, Users, Award, ArrowRight } from 'lucide-react';
+import { Code, Palette, Calculator, Target, GraduationCap, Sparkles, Clock, Award, ArrowRight, CheckCircle } from 'lucide-react';
 
 const Programs = () => {
-  const [activeProgram, setActiveProgram] = useState(0);
+  const [activeCategory, setActiveCategory] = useState(0);
 
-  const programs = [
+  const categories = [
     {
       icon: Code,
-      title: 'Software Engineering',
-      duration: '12 months',
-      level: 'Advanced Diploma',
-      description: 'Comprehensive program covering full-stack development, software architecture, and modern development methodologies.',
-      curriculum: ['Advanced JavaScript & TypeScript', 'React/Angular/Vue.js', 'Node.js & Express', 'Database Design', 'DevOps & CI/CD', 'Software Testing'],
-      career: ['Senior Developer', 'Tech Lead', 'Software Architect'],
-      salary: '₹8-15 LPA',
+      title: 'IT & Software',
       color: 'from-blue-600 to-blue-700',
       bgColor: 'bg-blue-50',
-      borderColor: 'border-blue-200'
+      borderColor: 'border-blue-200',
+      courses: [
+        { name: 'Diploma in Information Technology (DIT)', duration: '12 months', level: 'Diploma' },
+        { name: 'Advance Diploma in Computer Applications (ADCA)', duration: '12 months', level: 'Advance Diploma' },
+        { name: 'Course on Computer Concepts (CCC)', duration: '2 months', level: 'Certificate' },
+        { name: 'Basic Computer Course', duration: '3 months', level: 'Certificate' },
+        { name: 'Programming in C & C++', duration: '3 months', level: 'Certificate' },
+        { name: 'Java Programming', duration: '3 months', level: 'Certificate' },
+        { name: 'Python Programming', duration: '3 months', level: 'Certificate' }
+      ],
+      description: 'Master essential computer skills and programming languages for a career in IT. From basics to advanced applications.',
+      careers: ['Software Developer', 'IT Support', 'Programmer', 'System Administrator']
     },
     {
-      icon: Database,
-      title: 'Data Science & AI',
-      duration: '10 months',
-      level: 'Professional Certificate',
-      description: 'Master data analysis, machine learning, and artificial intelligence with hands-on projects using real-world datasets.',
-      curriculum: ['Python & R Programming', 'Machine Learning', 'Deep Learning', 'Data Visualization', 'Big Data Analytics', 'AI Ethics'],
-      career: ['Data Scientist', 'ML Engineer', 'AI Specialist'],
-      salary: '₹10-18 LPA',
-      color: 'from-purple-600 to-purple-700',
-      bgColor: 'bg-purple-50',
-      borderColor: 'border-purple-200'
+      icon: Palette,
+      title: 'Creative & Design',
+      color: 'from-emerald-600 to-teal-700',
+      bgColor: 'bg-emerald-50',
+      borderColor: 'border-emerald-200',
+      courses: [
+        { name: 'Diploma in Graphic Designing (DGD)', duration: '6 months', level: 'Diploma' },
+        { name: 'Web Designing & Development', duration: '6 months', level: 'Certificate' },
+        { name: 'Advance Desktop Publishing (DADTP)', duration: '4 months', level: 'Advance Certificate' },
+        { name: 'Video Editing & Animation', duration: '6 months', level: 'Certificate' },
+        { name: 'Multimedia Course', duration: '6 months', level: 'Certificate' }
+      ],
+      description: 'Unleash your creativity with design tools and techniques. Learn industry-standard software for graphics, web, and video.',
+      careers: ['Graphic Designer', 'Web Designer', 'Video Editor', 'Animator', 'DTP Operator']
     },
     {
-      icon: Cpu,
-      title: 'Embedded Systems',
-      duration: '8 months',
-      level: 'Specialized Program',
-      description: 'Design and develop embedded systems for IoT, automotive, and industrial applications with cutting-edge hardware.',
-      curriculum: ['C/C++ Programming', 'Microcontrollers', 'RTOS', 'IoT Protocols', 'PCB Design', 'Hardware Testing'],
-      career: ['Embedded Engineer', 'IoT Developer', 'Hardware Designer'],
-      salary: '₹6-12 LPA',
+      icon: Calculator,
+      title: 'Finance & Business',
       color: 'from-green-600 to-green-700',
       bgColor: 'bg-green-50',
-      borderColor: 'border-green-200'
+      borderColor: 'border-green-200',
+      courses: [
+        { name: 'Tally ERP 9 with GST', duration: '3 months', level: 'Certificate' },
+        { name: 'Tally Prime with GST', duration: '3 months', level: 'Certificate' },
+        { name: 'E-Accounting', duration: '2 months', level: 'Certificate' },
+        { name: 'Advance Excel', duration: '2 months', level: 'Certificate' },
+        { name: 'Data Analytics', duration: '4 months', level: 'Certificate' },
+        { name: 'Business Analytics', duration: '4 months', level: 'Certificate' }
+      ],
+      description: 'Gain expertise in accounting software, data analysis, and business intelligence tools for finance careers.',
+      careers: ['Accountant', 'Tally Operator', 'Data Analyst', 'Business Analyst', 'MIS Executive']
     },
     {
-      icon: Globe,
-      title: 'Cloud Architecture',
-      duration: '6 months',
-      level: 'Industry Certification',
-      description: 'Master cloud platforms, containerization, and scalable architecture design for enterprise applications.',
-      curriculum: ['AWS/Azure/GCP', 'Docker & Kubernetes', 'Microservices', 'Cloud Security', 'Infrastructure as Code', 'Monitoring'],
-      career: ['Cloud Architect', 'DevOps Engineer', 'Site Reliability Engineer'],
-      salary: '₹12-20 LPA',
-      color: 'from-amber-600 to-amber-700',
-      bgColor: 'bg-amber-50',
-      borderColor: 'border-amber-200'
+      icon: Target,
+      title: 'Digital Marketing',
+      color: 'from-orange-600 to-orange-700',
+      bgColor: 'bg-orange-50',
+      borderColor: 'border-orange-200',
+      courses: [
+        { name: 'Digital Marketing Complete Course', duration: '4 months', level: 'Certificate' },
+        { name: 'SEO (Search Engine Optimization)', duration: '2 months', level: 'Certificate' },
+        { name: 'Social Media Marketing', duration: '2 months', level: 'Certificate' },
+        { name: 'Google Ads & PPC', duration: '1.5 months', level: 'Certificate' },
+        { name: 'Content Marketing', duration: '1.5 months', level: 'Certificate' }
+      ],
+      description: 'Master digital marketing strategies, SEO, social media, and online advertising to build successful online businesses.',
+      careers: ['Digital Marketing Executive', 'SEO Specialist', 'Social Media Manager', 'Content Strategist']
     },
     {
-      icon: Shield,
-      title: 'Cybersecurity',
-      duration: '9 months',
-      level: 'Advanced Certificate',
-      description: 'Comprehensive cybersecurity training covering ethical hacking, network security, and digital forensics.',
-      curriculum: ['Ethical Hacking', 'Network Security', 'Digital Forensics', 'Security Auditing', 'Incident Response', 'Compliance'],
-      career: ['Security Analyst', 'Ethical Hacker', 'Security Consultant'],
-      salary: '₹8-16 LPA',
-      color: 'from-red-600 to-red-700',
-      bgColor: 'bg-red-50',
-      borderColor: 'border-red-200'
+      icon: GraduationCap,
+      title: 'Teacher Training',
+      color: 'from-teal-600 to-teal-700',
+      bgColor: 'bg-teal-50',
+      borderColor: 'border-teal-200',
+      courses: [
+        { name: 'Nursery Teacher Training (NTT)', duration: '12 months', level: 'Diploma' },
+        { name: 'Computer Teacher Training (CTT)', duration: '6 months', level: 'Certificate' }
+      ],
+      description: 'Professional training programs for aspiring teachers. Learn modern teaching methodologies and classroom management.',
+      careers: ['Nursery Teacher', 'Pre-Primary Teacher', 'Computer Teacher', 'Education Coordinator']
     },
     {
-      icon: Zap,
-      title: 'Digital Innovation',
-      duration: '4 months',
-      level: 'Executive Program',
-      description: 'Strategic program for professionals focusing on digital transformation, emerging technologies, and innovation management.',
-      curriculum: ['Digital Strategy', 'Emerging Technologies', 'Innovation Management', 'Digital Marketing', 'Analytics', 'Leadership'],
-      career: ['Digital Manager', 'Innovation Lead', 'Technology Consultant'],
-      salary: '₹15-25 LPA',
-      color: 'from-indigo-600 to-indigo-700',
-      bgColor: 'bg-indigo-50',
-      borderColor: 'border-indigo-200'
+      icon: Sparkles,
+      title: 'Women Empowerment',
+      color: 'from-pink-600 to-rose-700',
+      bgColor: 'bg-pink-50',
+      borderColor: 'border-pink-200',
+      courses: [
+        { name: 'Diploma in Beauty Culture & Make-up', duration: '6 months', level: 'Diploma' },
+        { name: 'Fashion Designing', duration: '12 months', level: 'Diploma' },
+        { name: 'Dress Designing', duration: '6 months', level: 'Certificate' },
+        { name: 'Tailoring Course', duration: '6 months', level: 'Certificate' },
+        { name: 'Spoken English (Basic & Advance)', duration: '3 months', level: 'Certificate' },
+        { name: 'IELTS / PTE Preparation', duration: '3 months', level: 'Certificate' },
+        { name: 'Personality Development', duration: '2 months', level: 'Certificate' }
+      ],
+      description: 'Empower yourself with skills that open doors to self-employment and personal growth. From beauty to fashion and communication.',
+      careers: ['Beautician', 'Makeup Artist', 'Fashion Designer', 'Tailor', 'Boutique Owner']
     }
   ];
 
@@ -92,143 +112,150 @@ const Programs = () => {
         <div className="text-center mb-20">
           <div className="inline-flex items-center space-x-2 bg-slate-100 px-4 py-2 rounded-full mb-6">
             <Code className="h-4 w-4 text-slate-600" />
-            <span className="text-slate-800 text-sm font-semibold uppercase tracking-wide">Academic Programs</span>
+            <span className="text-slate-800 text-sm font-semibold uppercase tracking-wide">Course Categories</span>
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
-            Industry-Aligned
-            <span className="block text-amber-600">Technical Programs</span>
+            Choose Your
+            <span className="block text-amber-600">Career Path</span>
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            Cutting-edge curriculum designed in collaboration with industry leaders, 
-            ensuring our graduates are equipped with the most relevant and in-demand skills.
+            From IT and design to business and beauty - explore our comprehensive range of
+            vocational courses designed to make you job-ready and confident.
           </p>
         </div>
 
-        {/* Program Navigation */}
-        <div className="flex flex-wrap justify-center gap-4 mb-16">
-          {programs.map((program, index) => (
+        {/* Category Navigation */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-16">
+          {categories.map((category, index) => (
             <button
               key={index}
-              onClick={() => setActiveProgram(index)}
-              className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
-                activeProgram === index
-                  ? `bg-gradient-to-r ${program.color} text-white shadow-lg`
-                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+              onClick={() => setActiveCategory(index)}
+              className={`flex flex-col items-center space-y-2 p-4 rounded-xl font-medium transition-all duration-300 ${
+                activeCategory === index
+                  ? `bg-gradient-to-r ${category.color} text-white shadow-lg transform scale-105`
+                  : 'bg-slate-50 text-slate-700 hover:bg-slate-100'
               }`}
             >
               {(() => {
-                const ProgramIcon = program.icon;
-                return <ProgramIcon className="h-5 w-5" />;
+                const CategoryIcon = category.icon;
+                return <CategoryIcon className="h-6 w-6" />;
               })()}
-              <span>{program.title}</span>
+              <span className="text-sm text-center leading-tight">{category.title}</span>
             </button>
           ))}
         </div>
 
-        {/* Active Program Details */}
-        <div className={`${programs[activeProgram].bgColor} rounded-3xl p-8 lg:p-12 border ${programs[activeProgram].borderColor}`}>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Program Info */}
-            <div className="space-y-8">
+        {/* Active Category Details */}
+        <div className={`${categories[activeCategory].bgColor} rounded-3xl p-8 lg:p-12 border ${categories[activeCategory].borderColor}`}>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            {/* Category Info */}
+            <div className="lg:col-span-1 space-y-6">
               <div>
                 <div className="flex items-center space-x-4 mb-4">
-                  <div className={`w-16 h-16 bg-gradient-to-r ${programs[activeProgram].color} rounded-xl flex items-center justify-center`}>
+                  <div className={`w-16 h-16 bg-gradient-to-r ${categories[activeCategory].color} rounded-xl flex items-center justify-center shadow-lg`}>
                     {(() => {
-                      const ActiveProgramIcon = programs[activeProgram].icon;
-                      return <ActiveProgramIcon className="h-8 w-8 text-white" />;
+                      const ActiveCategoryIcon = categories[activeCategory].icon;
+                      return <ActiveCategoryIcon className="h-8 w-8 text-white" />;
                     })()}
                   </div>
-                  <div>
-                    <h3 className="text-3xl font-bold text-slate-900">{programs[activeProgram].title}</h3>
-                    <p className="text-slate-600 font-medium">{programs[activeProgram].level}</p>
-                  </div>
                 </div>
-                <p className="text-lg text-slate-700 leading-relaxed">{programs[activeProgram].description}</p>
+                <h3 className="text-3xl font-bold text-slate-900 mb-4">{categories[activeCategory].title}</h3>
+                <p className="text-lg text-slate-700 leading-relaxed">{categories[activeCategory].description}</p>
               </div>
 
-              {/* Program Stats */}
-              <div className="grid grid-cols-2 gap-6">
-                <div className="bg-white/70 p-4 rounded-xl">
-                  <div className="flex items-center space-x-2 mb-2">
-                    <Clock className="h-5 w-5 text-slate-600" />
-                    <span className="font-semibold text-slate-900">Duration</span>
-                  </div>
-                  <p className="text-slate-700">{programs[activeProgram].duration}</p>
-                </div>
-                <div className="bg-white/70 p-4 rounded-xl">
-                  <div className="flex items-center space-x-2 mb-2">
-                    <Award className="h-5 w-5 text-slate-600" />
-                    <span className="font-semibold text-slate-900">Avg. Salary</span>
-                  </div>
-                  <p className="text-slate-700">{programs[activeProgram].salary}</p>
-                </div>
-              </div>
-
-              {/* Career Paths */}
+              {/* Career Opportunities */}
               <div>
-                <h4 className="font-bold text-slate-900 mb-3">Career Opportunities</h4>
-                <div className="flex flex-wrap gap-2">
-                  {programs[activeProgram].career.map((career, index) => (
-                    <span key={index} className="bg-white/70 px-3 py-1 rounded-full text-sm font-medium text-slate-700">
-                      {career}
-                    </span>
+                <h4 className="font-bold text-slate-900 mb-3 flex items-center">
+                  <Award className="h-5 w-5 mr-2 text-amber-500" />
+                  Career Opportunities
+                </h4>
+                <div className="space-y-2">
+                  {categories[activeCategory].careers.map((career, index) => (
+                    <div key={index} className="flex items-center space-x-2 text-slate-700">
+                      <CheckCircle className="h-4 w-4 text-green-600" />
+                      <span className="text-sm font-medium">{career}</span>
+                    </div>
                   ))}
                 </div>
               </div>
 
-              <button className={`bg-gradient-to-r ${programs[activeProgram].color} text-white px-8 py-4 rounded-lg font-semibold flex items-center space-x-2 hover:shadow-lg transition-all duration-300 transform hover:scale-105`}>
-                <span>Apply Now</span>
+              <button className={`w-full bg-gradient-to-r ${categories[activeCategory].color} text-white px-6 py-4 rounded-lg font-semibold flex items-center justify-center space-x-2 hover:shadow-lg transition-all duration-300 transform hover:scale-105`}>
+                <span>Enroll Now</span>
                 <ArrowRight className="h-5 w-5" />
               </button>
             </div>
 
-            {/* Curriculum */}
-            <div className="bg-white/70 rounded-2xl p-8">
-              <h4 className="text-xl font-bold text-slate-900 mb-6">Curriculum Highlights</h4>
-              <div className="space-y-4">
-                {programs[activeProgram].curriculum.map((item, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <div className={`w-2 h-2 bg-gradient-to-r ${programs[activeProgram].color} rounded-full`}></div>
-                    <span className="text-slate-700 font-medium">{item}</span>
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-8 p-4 bg-slate-50 rounded-xl">
-                <div className="flex items-center space-x-2 mb-2">
-                  <Users className="h-5 w-5 text-slate-600" />
-                  <span className="font-semibold text-slate-900">Class Size</span>
+            {/* Courses List */}
+            <div className="lg:col-span-2">
+              <div className="bg-white/70 rounded-2xl p-6">
+                <h4 className="text-xl font-bold text-slate-900 mb-6 flex items-center">
+                  <span className={`w-1 h-6 bg-gradient-to-b ${categories[activeCategory].color} rounded-full mr-3`}></span>
+                  Available Courses
+                </h4>
+                <div className="grid grid-cols-1 gap-4">
+                  {categories[activeCategory].courses.map((course, index) => (
+                    <div key={index} className="bg-white p-4 rounded-xl border border-slate-200 hover:shadow-md transition-all duration-300 group">
+                      <div className="flex items-start justify-between">
+                        <div className="flex-1">
+                          <h5 className="font-bold text-slate-900 mb-2 group-hover:text-amber-600 transition-colors">
+                            {course.name}
+                          </h5>
+                          <div className="flex items-center space-x-4 text-sm text-slate-600">
+                            <div className="flex items-center space-x-1">
+                              <Clock className="h-4 w-4" />
+                              <span>{course.duration}</span>
+                            </div>
+                            <span>•</span>
+                            <div className="flex items-center space-x-1">
+                              <Award className="h-4 w-4" />
+                              <span>{course.level}</span>
+                            </div>
+                          </div>
+                        </div>
+                        <button className={`px-4 py-2 bg-gradient-to-r ${categories[activeCategory].color} text-white rounded-lg text-sm font-medium hover:shadow-md transition-all duration-200 opacity-0 group-hover:opacity-100`}>
+                          Details
+                        </button>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-                <p className="text-slate-700">Maximum 25 students per batch for personalized attention</p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Program Features */}
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="text-center p-6">
-            <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-              <Award className="h-8 w-8 text-white" />
+        {/* Why Choose LBSTI */}
+        <div className="mt-20 grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="text-center p-6 bg-slate-50 rounded-xl">
+            <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <CheckCircle className="h-6 w-6 text-white" />
             </div>
-            <h4 className="text-lg font-bold text-slate-900 mb-2">Industry Certification</h4>
-            <p className="text-slate-600">Recognized certificates from leading technology companies</p>
+            <h4 className="text-lg font-bold text-slate-900 mb-2">Job-Ready Skills</h4>
+            <p className="text-slate-600 text-sm">Practical training focused on real-world applications</p>
           </div>
-          
-          <div className="text-center p-6">
-            <div className="w-16 h-16 bg-gradient-to-r from-amber-500 to-amber-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-              <Users className="h-8 w-8 text-white" />
+
+          <div className="text-center p-6 bg-slate-50 rounded-xl">
+            <div className="w-12 h-12 bg-gradient-to-r from-amber-500 to-amber-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <GraduationCap className="h-6 w-6 text-white" />
             </div>
-            <h4 className="text-lg font-bold text-slate-900 mb-2">Expert Mentorship</h4>
-            <p className="text-slate-600">One-on-one guidance from industry professionals</p>
+            <h4 className="text-lg font-bold text-slate-900 mb-2">Certified Courses</h4>
+            <p className="text-slate-600 text-sm">Industry-recognized certificates upon completion</p>
           </div>
-          
-          <div className="text-center p-6">
-            <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-              <Zap className="h-8 w-8 text-white" />
+
+          <div className="text-center p-6 bg-slate-50 rounded-xl">
+            <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <Clock className="h-6 w-6 text-white" />
             </div>
-            <h4 className="text-lg font-bold text-slate-900 mb-2">Live Projects</h4>
-            <p className="text-slate-600">Real-world projects with industry partners</p>
+            <h4 className="text-lg font-bold text-slate-900 mb-2">Flexible Timings</h4>
+            <p className="text-slate-600 text-sm">Morning, evening, and weekend batches available</p>
+          </div>
+
+          <div className="text-center p-6 bg-slate-50 rounded-xl">
+            <div className="w-12 h-12 bg-gradient-to-r from-rose-500 to-rose-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <Award className="h-6 w-6 text-white" />
+            </div>
+            <h4 className="text-lg font-bold text-slate-900 mb-2">Placement Support</h4>
+            <p className="text-slate-600 text-sm">Career guidance and job placement assistance</p>
           </div>
         </div>
       </div>

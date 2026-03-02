@@ -16,9 +16,7 @@ const Header = () => {
   const menuItems = [
     { label: 'Home', href: '#home' },
     { label: 'About', href: '#about' },
-    { label: 'Programs', href: '#programs' },
-    { label: 'Faculty', href: '#faculty' },
-    { label: 'Research', href: '#research' },
+    { label: 'Courses', href: '#programs' },
     { label: 'Contact', href: '#contact' },
   ];
 
@@ -39,7 +37,7 @@ const Header = () => {
             </div>
             <div>
               <span className="text-2xl font-bold text-white tracking-tight">LBSTI</span>
-              <div className="text-xs text-slate-400 font-medium">TECHNICAL INSTITUTE</div>
+              <div className="text-xs text-slate-400 font-medium">VOCATIONAL TRAINING</div>
             </div>
           </div>
 
